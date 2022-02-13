@@ -1,7 +1,9 @@
-package com.domain.newbanking;
+package com.domain.newbanking.view;
 
 import android.view.View;
 import android.widget.ImageView;
+
+import com.domain.newbanking.R;
 
 import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;

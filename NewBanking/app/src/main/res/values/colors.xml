@@ -11,4 +11,6 @@
     <color name="text">#8689A0</color>
     <color name="text_section">#363741</color>
     <color name="text_section_link">#4E66EA</color>
+    <color name="cerdt_card">#F1F9E8</color>
+    <color name="debit_card">#FCF0EF</color>
 </resources>

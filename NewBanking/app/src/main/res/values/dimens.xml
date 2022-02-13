@@ -2,7 +2,8 @@
 <resources>
     <dimen name="text_X">32sp</dimen>
     <dimen name="text_M">20sp</dimen>
-    <dimen name="space_M">20sp</dimen>
+    <dimen name="space_M">20dp</dimen>
+    <dimen name="space_G">32dp</dimen>
     <dimen name="user_list">100dp</dimen>
     <dimen name="hear_text">40sp</dimen>
 </resources>

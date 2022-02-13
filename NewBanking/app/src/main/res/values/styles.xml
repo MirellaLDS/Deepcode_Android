@@ -11,7 +11,18 @@
         <item name="android:textSize">@dimen/text_M</item>
         <item name="android:textColor">@color/text_section</item>
     </style>
+
     <style name="Section.Text.Link" parent="Section.Text">
         <item name="android:textColor">@color/text_section_link</item>
+    </style>
+
+    <style name="Transaction" />
+    <style name="Transaction.Title" parent="Transaction">
+        <item name="android:textSize">@dimen/text_M</item>
+        <item name="android:textColor">@color/text_section</item>
+    </style>
+    <style name="Transaction.Description" parent="Transaction">
+        <item name="android:textSize">@dimen/text_M</item>
+        <item name="android:textColor">@color/text</item>
     </style>
 </resources>

@@ -1,4 +1,4 @@
-package com.domain.newbanking;
+package com.domain.newbanking.view;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,16 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import com.domain.newbanking.R;
 
 import java.util.ArrayList;
 
-public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+public class TransactionsAdapter extends RecyclerView.Adapter<UserViewHolder> {
     private Context context;
     private ArrayList<Integer> res;
 
-    public UserAdapter(Context context, ArrayList<Integer> res) {
+    public TransactionsAdapter(Context context, ArrayList<Integer> res) {
         this.context = context;
         this.res = res;
     }
@@ -24,7 +26,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
     @Override
     public UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.user_item_layout, parent, false);
+                .inflate(R.layout.item_bank_transactions_layout, parent, false);
         return new UserViewHolder(view);
     }
 

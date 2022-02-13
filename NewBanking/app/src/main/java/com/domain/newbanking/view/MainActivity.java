@@ -1,9 +1,10 @@
-package com.domain.newbanking;
+package com.domain.newbanking.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.domain.newbanking.R;
 import com.domain.newbanking.databinding.ActivityMainBinding;
 
 import java.util.ArrayList;

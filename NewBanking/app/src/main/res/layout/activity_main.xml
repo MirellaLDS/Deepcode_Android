@@ -1,112 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:paddingBottom="@dimen/space_G"
+    tools:context=".view.MainActivity">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintGuide_begin="24dp"
-        android:orientation="vertical"/>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineEnd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintGuide_end="24dp"
-        android:orientation="vertical"/>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tbBarra"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:title="."
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/emoji_emote_emoticon_emoticons_stretch_icon"
+            app:layout_constraintBottom_toBottomOf="@id/tvUserName"
+            app:layout_constraintStart_toEndOf="@id/tvUserName"
+            app:layout_constraintTop_toTopOf="@id/tvUserName" />
+
         <TextView
+            android:id="@+id/tvSaudacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Boa noite,"
+            android:textColor="@color/text"
+            android:textSize="@dimen/hear_text"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tbBarra" />
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amanda!"
+            android:textColor="@color/text_section"
+            android:textSize="@dimen/hear_text"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvSaudacao" />
+
+        <TextView
+            android:id="@+id/tvRecentPayers"
             style="@style/Section.Text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/dashboard"/>
-    </androidx.appcompat.widget.Toolbar>
+            android:layout_marginTop="@dimen/space_M"
+            android:text="Recent Payee's"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/ccCard" />
 
-    <TextView
-        android:id="@+id/tvSaudacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Boa noite,"
-        android:textColor="@color/text"
-        android:textSize="@dimen/hear_text"
-        android:layout_marginTop="32dp"
-        app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@id/tbBarra"/>
+        <TextView
+            android:id="@+id/tvRecentPayersSeeAll"
+            style="@style/Section.Text.Link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_M"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+            android:text="Recent Payee's"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintTop_toBottomOf="@id/ccCard" />
 
-    <TextView
-        android:id="@+id/tvUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Amanda!"
-        android:textColor="@color/text_section"
-        android:textSize="@dimen/hear_text"
-        app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintTop_toBottomOf="@id/tvSaudacao"/>
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbBarra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title=".">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/emoji_emote_emoticon_emoticons_stretch_icon"
-        android:layout_marginStart="8dp"
-        app:layout_constraintTop_toTopOf="@id/tvUserName"
-        app:layout_constraintBottom_toBottomOf="@id/tvUserName"
-        app:layout_constraintStart_toEndOf="@id/tvUserName"/>
+            <TextView
+                style="@style/Section.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/dashboard" />
+        </androidx.appcompat.widget.Toolbar>
 
-    <com.domain.newbanking.CredCardComponent
-        android:id="@+id/ccCard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:balanceText="$ 1.200,99"
-        app:validadeText="05/06"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/visa_logo"
-        app:layout_constraintTop_toBottomOf="@id/tvUserName"
-        app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="24dp" />
 
-    <TextView
-        style="@style/Section.Text"
-        android:id="@+id/tvRecentPayers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_M"
-        app:layout_constraintTop_toBottomOf="@id/ccCard"
-        app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        android:text="Recent Payee's"/>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="24dp" />
 
-    <TextView
-        style="@style/Section.Text.Link"
-        android:id="@+id/tvRecentPayersSeeAll"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
-        android:layout_marginTop="@dimen/space_M"
-        app:layout_constraintTop_toBottomOf="@id/ccCard"
-        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
-        android:text="Recent Payee's"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lvLista"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/user_list"
+            android:layout_marginTop="@dimen/space_M"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvRecentPayers"
+            tools:listitem="@layout/user_item_layout" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/lvLista"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/user_list"
-        android:layout_marginTop="@dimen/space_M"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintTop_toBottomOf="@id/tvRecentPayers"
-        app:layout_constraintStart_toStartOf="@id/guidelineStart"
-        app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
-        tools:listitem="@layout/user_item_layout"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_M"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lvLista"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_bank_transactions_layout"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.domain.newbanking.CredCardComponent
+            android:id="@+id/ccCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/visa_logo"
+            app:balanceText="$ 1.200,99"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/tvUserName"
+            app:validadeText="05/06" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
