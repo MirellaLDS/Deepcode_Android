@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NewBanking</string>
+    <string name="logo_visa">logo visa</string>
+    <string name="dashboard">Dashboard</string>
+</resources>

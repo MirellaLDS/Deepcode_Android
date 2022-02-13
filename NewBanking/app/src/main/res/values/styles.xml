@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Card" />
+    <style name="Card.Text" parent="">
+        <item name="android:textSize">@dimen/text_M</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Section" />
+    <style name="Section.Text" parent="Section">
+        <item name="android:textSize">@dimen/text_M</item>
+        <item name="android:textColor">@color/text_section</item>
+    </style>
+    <style name="Section.Text.Link" parent="Section.Text">
+        <item name="android:textColor">@color/text_section_link</item>
+    </style>
+</resources>

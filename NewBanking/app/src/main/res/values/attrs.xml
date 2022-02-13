@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomView">
+        <attr name="balanceText" format="string" />
+        <attr name="bandeiraIcon" format="integer" />
+        <attr name="validadeText" format="string" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,12 @@
+Card 1 - #4E66EA
+Card 2 - #E68A00
+
+Credito - #F1F9E8
+Débito - #FAF0EF
+
+Cinza - #F5F5F5
+
+Botão azul - #536DFE
+
+Texto 1 - #494A53
+Texto 2 - #898CA3
