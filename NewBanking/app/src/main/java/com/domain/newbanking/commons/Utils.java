@@ -1,4 +1,4 @@
-package com.domain.newbanking;
+package com.domain.newbanking.commons;
 
 import android.graphics.drawable.GradientDrawable;
 import android.widget.ImageView;

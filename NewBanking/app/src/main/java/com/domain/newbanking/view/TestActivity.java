@@ -1,11 +1,9 @@
 package com.domain.newbanking.view;
 
-import android.graphics.Color;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 
 import com.domain.newbanking.R;
-import com.domain.newbanking.Utils;
+import com.domain.newbanking.commons.Utils;
 import com.domain.newbanking.databinding.TelaGrandeBinding;
 
 import androidx.annotation.Nullable;

@@ -1,4 +1,4 @@
-package com.domain.newbanking.view;
+package com.domain.newbanking.view.home.user;
 
 import android.view.View;
 import android.widget.ImageView;

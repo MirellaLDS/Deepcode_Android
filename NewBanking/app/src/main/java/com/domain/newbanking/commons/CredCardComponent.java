@@ -1,4 +1,4 @@
-package com.domain.newbanking;
+package com.domain.newbanking.commons;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.domain.newbanking.R;
 import com.domain.newbanking.databinding.CreditCardLayoutBinding;
 
 public class CredCardComponent extends ConstraintLayout {
